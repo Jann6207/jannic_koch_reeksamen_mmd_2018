@@ -1,0 +1,924 @@
+/* Sørger for at hidden ikke har et display (bliver ej vist)  */
+
+nav.hidden {
+    display: none;
+}
+
+
+/* Parrent-div til bar - Styling af alle 3 barer (Burger Ikon)  */
+
+.menubutton {
+    width: 2em;
+    height: 2em;
+    border: 1px #B8A060;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    float: right;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+
+
+}
+
+/* Styling af alle 3 barer (samme class) */
+
+.bar {
+    width: 2.5em;
+    height: 0.4em;
+    background-color: #B8A060;
+    transition: transform 0.5s;
+   
+
+}
+
+/* Styling af øverste bar (kryds)*/
+
+.kryds .bar1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+    
+
+}
+
+/* Styling af midterste bar (kryds)*/
+.kryds .bar2 {
+    visibility: hidden;
+}
+
+/* Styling af nedeste bar (bar)*/
+
+.kryds .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+
+}
+
+/* Styling af nav element*/
+
+nav {
+    position: fixed;
+    background-color: rgba(000, 000, 000, 0.9);
+    
+    transform: translateY(0);
+    transform-origin: top;
+    z-index: 5;
+    height: 70%;
+    width: 20%;
+    color: #ffffff;
+   
+    
+
+}
+
+/* indeholder href links, dropdown_menu, dropdown_button og dropdown-content*/
+
+.content {
+
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    font-size: 30px;
+    padding-top: 15%;
+
+}
+
+/* nav class*/
+
+.hidden {
+    top: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+.content a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+.content a:hover {
+    text-decoration: underline;
+    text-decoration-color: #B8A060;
+}
+
+
+/* Portfolio = dropdown_button*/
+
+.dropdown_button {
+
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Indeholder childs: Dropdown_button og dropdown-content*/
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    
+
+
+}
+
+/* dropdown-content */
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color:  rgba(000, 000, 000, 0.2);
+    min-width: 100%;
+    z-index: 5;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 16px 0px rgba(184, 160, 96, 0.4);
+    font-size: 25px;
+   
+}
+
+/* href links indeni dropdown-content */
+
+.dropdown-content a {
+    color: #B8A060;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+
+
+}
+
+/* Skift farve på dropdown href ved hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Viser dropdownmenu ved hover */
+
+.dropdown_menu:hover .dropdown-content {
+    display: block;
+
+}
+
+/* Skift baggrundsfarve på dropdown_button (portfolio) når dropdown_content (href link) vises */
+
+.dropdown_menu:hover .dropdown_button {
+    text-decoration: underline;
+    text-decoration-color: #B8A060;
+
+}
+
+.om6 {
+    padding-top: 15px;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+body {
+
+    background-color: #ffffff;
+}
+
+.logo img {
+    z-index: 1;
+    position: absolute;
+    /*left: 75px;
+    top: 75px;*/
+    left: 1.5%;
+    top: 2%;
+    height: 146px;
+    width: 117px;
+}
+
+.sectionwrapper {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+}
+
+
+.design,
+h1 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 12vw;
+    text-align: center;
+    margin: 0;
+    /*padding-left: 10px;*/
+}
+
+
+.sectionwrapper2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15%;
+
+}
+
+h3 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 5vw;
+    margin: 0px;
+    margin-top: 12px;
+    /*padding-left: 70px;
+    padding-top: 10px;*/
+}
+
+.koch {
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 8vw;
+
+    /*margin: 0px;*/
+    padding-left: 15px;
+
+}
+
+
+.hr {
+    z-index: 1;
+    border-color: #cccccc;
+    margin-bottom: 150px;
+    margin-top: 110px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 1px;
+    background: #cccccc;
+
+}
+
+
+.video-container {
+    z-index: -100;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#video-bg {
+    width: 100%;
+}
+
+.menudiv {
+   
+    position: fixed;
+    right: 2%;
+    top: 2%;  
+    cursor: pointer;
+}
+
+.div {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+    /* position: fixed;
+    right: 2%;
+    top: 5%; */
+}
+
+.div1 {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+    /* position: fixed;
+    right: 2%;
+    top: 3.5%; */
+}
+
+.div2 {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+    /*  position: fixed;
+    right: 2%;
+    top: 2%;    
+   */
+}
+
+
+
+
+
+.kontaktoplysninger {
+
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 4em;
+    margin: 0px;
+    font-weight: 600;
+    /*padding-top: 30px;
+    text-align: center;
+    
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 10px;*/
+    padding-top: 80px;
+}
+
+.og {
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: color: #ffffff;
+    font-size: 2em;
+    /*letter-spacing: 40px;*/
+    margin: 0px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.socialemedier {
+    text-align: center;
+    margin: 4em;
+    z-index: 3;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 80px;
+    margin: 0px;
+    text-transform: uppercase;
+
+
+}
+
+
+.hr2 {
+    z-index: 1;
+    border-color: #cccccc;
+    margin-bottom: 112px;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 1px;
+
+
+}
+
+
+/*.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    */
+
+.socialeikoner,
+.vl {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
+.fa {
+    font-size: 50px;
+    padding: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 30px 20px;
+    border-radius: 50%;
+
+
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+    opacity: 0.8;
+
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+.fa-facebook {
+    background: #333333;
+    color: white;
+
+    ;
+}
+
+/* Instagram */
+
+.fa-instagram {
+    background: #333333;
+    color: white;
+
+}
+
+/* LinkedIn */
+
+.fa-linkedin {
+    background: #333333;
+    color: white;
+
+}
+
+
+.vl {
+    border-left: 2px solid #cccccc;
+    align-content: center;
+
+}
+
+.nummer {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    font-size: 1.8vw;
+    /*letter-spacing: 40px;*/
+    margin: 0px;
+
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.mail {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2vw;
+    flex-wrap: wrap;
+    
+
+
+
+}
+
+.mail1,
+.mail2,
+.mail3 {
+
+    padding-top: 100px;
+    padding-bottom: 40px;
+   
+
+
+}
+
+.centerwrapper3 {
+
+
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+
+
+}
+
+.footer {
+    float: left;
+    width: 100%;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    /*background-color: rgb(0, 0, 0) ;*/
+    /*background-color: rgba(0, 0, 0, 0.8 );*/
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: .8vw; ;
+
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .design,
+h1 {
+   
+    font-size: 16vw;
+    margin-top: 10px;
+
+}
+    
+   .sectionwrapper2 {
+
+    margin-left: 15%;
+    margin-top: 0px;
+
+}
+    
+    h3 {
+   
+  
+    font-size: 8vw;
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 
+    
+}
+    
+    .koch {
+  
+    font-size: 10vw;
+    padding-left: 5px;
+
+}
+    
+    .hr {
+    
+    align-content: center;    
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 15px;    
+}
+    
+    .logo img {
+        
+    height: 100px;
+    width: 82px;
+    left: 1.5%;
+    top: 1.5%;
+    
+    }
+    
+    
+    .kontaktoplysninger {
+        font-size: 8vw;
+        margin-top: 0px;
+        padding-top: 10px;
+        
+    }
+    
+     .og {
+        font-size: 3vw;
+       
+    }
+    
+    .socialemedier {
+        font-size: 8vw;
+        margin-top: 10px;
+    }
+    
+ /*   .video-container {
+        width: 100%;
+        height: 200%;
+        overflow: hidden;
+        
+    }
+    #video-bg {
+    width: 100%;
+}*/
+    
+    .video-container {
+       
+        
+        overflow: hidden;
+        
+    }
+    
+    .mail {
+        
+        justify-content: space-around;
+        font-size: 1em;
+        
+
+
+    }
+    
+     .nummer {
+        font-size: 2em;
+        flex-direction: column;
+        
+    }
+    
+    .footer {
+        
+        font-size: 1.5vw;
+        width: 100%;
+        bottom: 0px;
+        
+        right: 0;
+      
+        left: 0;
+        text-align: center;
+}
+}
+
+@media screen and (max-width: 600px) {
+    
+  .design,
+    h1 {
+
+        font-size: 16vw;
+        margin-top: 10px;
+
+    }
+
+    .sectionwrapper2 {
+
+        margin-left: 15%;
+        margin-top: 0px;
+
+    }
+
+    h3 {
+
+
+        font-size: 8vw;
+        margin: 0px;
+        margin-top: 4px;
+        margin-bottom:
+    }
+
+    .koch {
+
+        font-size: 10vw;
+        padding-left: 5px;
+
+    }
+
+    .hr {
+
+        align-content: center;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        
+    height: 70px;
+    width: 52px;
+    left: 1.5%;
+    top: 1%;
+    
+    }
+
+
+    .kontaktoplysninger {
+        font-size: 10vw;
+        margin-top: 50px;
+
+    }
+
+    .socialemedier {
+        font-size: 10vw;
+
+    }
+
+    .og {
+        font-size: 8vw;
+
+    }
+
+    .hr2 {
+        z-index: 1;
+        border-color: #cccccc;
+        /*margin-bottom: 112px;*/
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        height: 1px;
+
+    }
+
+    .nummer {
+        font-size: 1.5em;
+        padding-bottom: 30px;
+
+    }
+
+    .centerwrapper3 {
+        flex-wrap: wrap-reverse;
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .mail {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.5em;
+        
+
+
+    }
+
+    .mail1,
+    .mail2,
+    .mail3 {
+
+        padding-top: 40px;
+        padding-bottom: 30px;
+       
+        
+
+    }
+
+
+ .footer {
+        
+        font-size: 2vw;
+        width: 100%;
+        bottom: 0px;
+        
+        right: 0;
+      
+        left: 0;
+        text-align: center;
+} 
+
+
+
+
+
+}
+   
+
+   
+
+@media screen and (max-width: 400px) {
+
+    .design,
+    h1 {
+
+        font-size: 16vw;
+        margin-top: 10px;
+
+    }
+
+    .sectionwrapper2 {
+
+        margin-left: 15%;
+        margin-top: 0px;
+
+    }
+
+    h3 {
+
+
+        font-size: 8vw;
+        margin: 0px;
+        margin-top: 4px;
+        margin-bottom:
+    }
+
+    .koch {
+
+        font-size: 10vw;
+        padding-left: 5px;
+
+    }
+
+    .hr {
+
+        align-content: center;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        
+    height: 70px;
+    width: 52px;
+    left: 1.5%;
+    top: 1%;
+    
+    }
+
+
+    .kontaktoplysninger {
+    font-size: 10vw;
+    margin-top: 40px;
+
+    }
+
+    .socialemedier {
+        font-size: 10vw;
+
+    }
+
+    .og {
+        font-size: 8vw;
+
+    }
+
+    .hr2 {
+        z-index: 1;
+        border-color: #cccccc;
+        /*margin-bottom: 112px;*/
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        height: 1px;
+
+    }
+
+    .nummer {
+        font-size: 1em;
+        padding-bottom: 30px;
+
+    }
+
+    .centerwrapper3 {
+        flex-wrap: wrap-reverse;
+        display: inline-flex;
+        justify-content: center;
+        
+    }
+
+    .mail {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 1em;
+        
+
+
+    }
+
+    .mail1,
+    .mail2,
+    .mail3 {
+
+        padding-top: 40px;
+        padding-bottom: 30px;
+       float: left;
+        
+
+    }
+    
+   
+
+
+    .footer {
+
+        font-size: .6em;
+         width: 100%;
+        bottom: 300px;
+
+        right: 0;
+
+        left: 0;
+        text-align: center;
+    }
+
+}

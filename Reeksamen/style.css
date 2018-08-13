@@ -1,0 +1,977 @@
+body {
+
+    background-color: #ffffff;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.music {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 4vw;
+    border: solid;
+    border-color: #ffffff;
+    margin-left: 26%;
+    margin-right: 26%;
+    transition: .5s;
+    margin-top: 30px;
+}
+
+.music:hover {
+    background-color: rgb(184, 160, 96, 0.6);
+    cursor: pointer;
+}
+
+
+.music a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.music_border a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.univers {
+    width 100%;
+}
+
+/* Sørger for at hidden ikke har et display (bliver ej vist)  */
+
+nav.hidden {
+    display: none;
+}
+
+
+/* Parrent-div til bar - Styling af alle 3 barer (Burger Ikon)  */
+
+.menubutton {
+    width: 2em;
+    height: 2em;
+    border: 1px #B8A060;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    float: right;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+
+
+}
+
+/* Styling af alle 3 barer (samme class) */
+
+.bar {
+    width: 2.5em;
+    height: 0.4em;
+    background-color: #B8A060;
+    transition: transform 0.5s;
+
+
+}
+
+/* Styling af øverste bar (kryds)*/
+
+.kryds .bar1 {
+    transform: rotate(-45deg) translate(-8px, 7px);
+
+
+}
+
+/* Styling af midterste bar (kryds)*/
+
+.kryds .bar2 {
+    visibility: hidden;
+}
+
+/* Styling af nedeste bar (bar)*/
+
+.kryds .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+
+}
+
+/* Styling af nav element*/
+
+nav {
+    position: fixed;
+    background-color: rgba(000, 000, 000, 0.9);
+
+    transform: translateY(0);
+    transform-origin: top;
+    z-index: 5;
+    height: 70%;
+    width: 20%;
+    color: #ffffff;
+
+
+
+}
+
+/* indeholder href links, dropdown_menu, dropdown_button og dropdown-content*/
+
+.content {
+
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    font-size: 30px;
+    padding-top: 60px;
+
+}
+
+/* nav class*/
+
+.hidden {
+    top: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+.content a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.content a:hover {
+    text-decoration: underline;
+    text-decoration-color: #B8A060;
+}
+
+
+/* Portfolio = dropdown_button*/
+
+.dropdown_button {
+
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Indeholder childs: Dropdown_button og dropdown-content*/
+
+.dropdown_menu {
+    position: relative;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+
+
+
+}
+
+/* dropdown-content */
+
+.dropdown-content {
+    display: none;
+    position: relative;
+
+    min-width: 100%;
+    z-index: 5;
+    text-transform: uppercase;
+
+    font-size: 25px;
+
+}
+
+/* href links indeni dropdown-content */
+
+.dropdown-content a {
+    color: #B8A060;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+
+
+}
+
+/* Skift farve på dropdown href ved hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    text-decoration: underline;
+}
+
+/* Viser dropdownmenu ved hover */
+
+.dropdown_menu:hover .dropdown-content {
+    display: block;
+
+}
+
+/* Skift baggrundsfarve på dropdown_button (portfolio) når dropdown_content (href link) vises */
+
+.dropdown_menu:hover .dropdown_button {
+    text-decoration: underline;
+    text-decoration-color: #B8A060;
+
+}
+
+.om6 {
+    padding-top: 15px;
+}
+
+.logo img {
+    z-index: 1;
+    position: absolute;
+    /*left: 75px;
+    top: 75px;*/
+    left: 1.5%;
+    top: 2%;
+    height: 146px;
+    width: 117px;
+}
+
+.sectionwrapper {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+}
+
+
+.design,
+h1 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 12vw;
+    text-align: center;
+    margin: 0;
+    /*padding-left: 10px;*/
+}
+
+
+
+.sectionwrapper2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10%;
+
+}
+
+h3 {
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 5vw;
+    margin: 0px;
+    margin-top: 12px;
+
+}
+
+.koch {
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 8vw;
+
+
+    padding-left: 15px;
+
+}
+
+
+.hr {
+    z-index: 1;
+    border-color: #cccccc;
+    margin-bottom: 10px;
+    margin-top: 110px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 1px;
+
+}
+
+.x-files a {
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    color: #B8A060;
+    font-size: 1.5vw;
+    margin-top: 35px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    transition: 0.5s ease-in-out;
+    margin-left: 30%;
+    margin-right: 30%;
+
+
+
+
+
+}
+
+
+.x-files a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 100;
+
+
+    background-color: rgb(221, 221, 221);
+    background-color: rgba(221, 221, 221, 0.4);
+    cursor: pointer;
+    border-radius: 0%;
+    text-decoration-color: #B8A060;
+    margin-left: 25%;
+    margin-right: 25%;
+
+
+
+
+}
+
+
+
+.portfolio {
+
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #B8A060;
+    font-size: 3em;
+    margin: 0px;
+    padding-top: 10px;
+    font-weight: 600;
+
+
+}
+
+
+
+.semester {
+    text-align: center;
+    z-index: 3;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 3em;
+    margin: 0px;
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+.video-container {
+    z-index: -100;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+
+    background-size: cover;
+
+}
+
+#video-bg {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+
+}
+
+.menudiv {
+
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    cursor: pointer;
+}
+
+.div {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+
+
+}
+
+.div1 {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+
+
+}
+
+.div2 {
+
+    width: 40px;
+    height: 5px;
+    background-color: #B8A060;
+    margin: 10px 0px;
+
+}
+
+.fade {
+    opacity: 1;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.semester {
+    color: #ffffff;
+    font-size: 4em;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.footer {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: .8em;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+@media screen and (max-height:800px) {
+    nav {
+        position: fixed;
+        background-color: rgba(000, 000, 000, 0.9);
+
+        transform: translateY(0);
+        transform-origin: top;
+        z-index: 5;
+        height: 100%;
+        width: 100%;
+        color: #ffffff;
+
+
+
+    }
+}
+
+@media screen and (max-height: 700px) {
+
+    .content {
+
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        display: block;
+        position: relative;
+        font-size: 25px;
+        padding-top: 10px;
+
+    }
+
+    .dropdown-content {
+
+        font-size: 20px;
+
+    }
+}
+
+
+@media screen and (max-height: 600px) {
+
+    .content {
+
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        display: block;
+        position: relative;
+        font-size: 22px;
+        padding-top: 10px;
+
+    }
+
+    .dropdown-content {
+
+        font-size: 15px;
+
+    }
+}
+
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .content {
+
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        display: block;
+        position: relative;
+        font-size: 20px;
+        padding-top: 10px;
+
+    }
+
+    .dropdown-content {
+
+        font-size: 15px;
+
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .content {
+
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        display: block;
+        position: relative;
+        font-size: 15px;
+        padding-top: 10px;
+
+    }
+
+    .dropdown-content {
+
+        font-size: 14px;
+
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+
+
+    .hr {
+
+        margin-top: 15px;
+
+    }
+
+    .x-files {
+
+        margin-top: 40px;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 1280px) {
+
+
+
+
+    nav {
+        position: fixed;
+        background-color: rgba(000, 000, 000, 0.9);
+
+        transform: translateY(0);
+        transform-origin: top;
+        z-index: 5;
+        height: 100%;
+        width: 100%;
+        color: #ffffff;
+
+
+
+    }
+
+    .grundlaeggende {
+
+        margin-top: 200px;
+
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .music {
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+
+    .design,
+    h1 {
+
+        font-size: 16vw;
+        margin-top: 10px;
+
+    }
+
+    .sectionwrapper2 {
+
+        margin-left: 15%;
+        margin-top: 0px;
+
+    }
+
+    h3 {
+
+
+        font-size: 8vw;
+        margin: 0px;
+        margin-top: 4px;
+        margin-bottom:
+    }
+
+    .koch {
+
+        font-size: 10vw;
+        padding-left: 5px;
+
+    }
+
+    .hr {
+
+        align-content: center;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: 15px;
+    }
+
+    .logo img {
+
+        height: 100px;
+        width: 82px;
+        left: 1.5%;
+        top: 1.5%;
+
+    }
+
+    .x-files a {
+        font-size: 2.5vw;
+        margin-top: 4%;
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+    }
+
+    .x-files a:hover {
+
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 2.5vw;
+        background-color: rgb(157, 157, 157);
+        background-color: rgba(157, 157, 157, 0.6);
+    }
+
+    .portfolio {
+        font-size: 8vw;
+        margin-top: 10px;
+
+    }
+
+    .semester {
+        font-size: 8vw;
+        margin-top: 10px;
+    }
+
+
+
+    .video-container {
+
+
+        overflow: hidden;
+
+    }
+
+    .footer {
+
+        font-size: 1em;
+        width: 100%;
+
+        right: 0;
+
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .design,
+    h1 {
+
+        font-size: 16vw;
+        margin-top: 10px;
+
+    }
+
+    .sectionwrapper2 {
+
+        margin-left: 15%;
+        margin-top: 0px;
+
+    }
+
+    h3 {
+
+
+        font-size: 8vw;
+        margin: 0px;
+        margin-top: 4px;
+        margin-bottom:
+    }
+
+    .koch {
+
+        font-size: 10vw;
+        padding-left: 5px;
+
+    }
+
+    .hr {
+
+        align-content: center;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+
+        height: 80px;
+        width: 62px;
+        left: 1.5%;
+        top: 1%;
+
+    }
+
+    .x-files a {
+        font-size: 1em;
+        margin-top: 100px;
+        margin-left: 25%;
+        margin-right: 25%;
+
+    }
+
+    .x-files a:hover {
+
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 1em;
+        background-color: rgb(157, 157, 157);
+        background-color: rgba(157, 157, 157, 0.6);
+
+
+    }
+    .portfolio {
+        font-size: 12vw;
+        margin-top: 1px;
+
+    }
+
+    .semester {
+        font-size: 13vw;
+
+    }
+
+
+
+
+
+
+
+    .video-container {
+
+
+        overflow: hidden;
+
+    }
+
+    .footer {
+
+        font-size: 2vw;
+        width: 100%;
+
+        right: 0;
+
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .music {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .design,
+    h1 {
+
+        font-size: 16vw;
+        margin-top: 30px;
+
+    }
+
+    .sectionwrapper2 {
+
+        margin-left: 12%;
+        margin-top: 0px;
+
+    }
+
+    h3 {
+
+
+        font-size: 8vw;
+        margin: 0px;
+        margin-top: 4px;
+        margin-bottom:
+    }
+
+    .koch {
+
+        font-size: 10vw;
+        padding-left: 5px;
+
+    }
+
+    .hr {
+
+        align-content: center;
+        margin-top: 15px;
+    }
+
+    .logo img {
+
+        height: 70px;
+        width: 52px;
+        left: 1.5%;
+        top: 1%;
+
+    }
+
+    .x-files a {
+        font-size: 1em;
+        margin-top: 50px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .x-files a:hover {
+
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 1em;
+        background-color: rgb(157, 157, 157);
+        background-color: rgba(157, 157, 157, 0.6);
+
+    }
+
+    .portfolio {
+        font-size: 15vw;
+        margin-top: 30px;
+
+    }
+
+    .semester {
+        font-size: 12vw;
+        margin-top: 50px;
+    }
+
+
+
+    .video-container {
+
+
+        overflow: hidden;
+
+    }
+
+    .music {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 7vw;
+    }
+
+    .footer {
+
+        font-size: .6em;
+        width: 100%;
+
+
+        right: 0;
+
+        left: 0;
+        text-align: center;
+    }
+}
